@@ -89,3 +89,19 @@ const images = [
   
   const largeImageURL = event.target.dataset.source;
   });
+
+  galleryContainer.addEventListener("click", onGalleryClick);
+
+function onGalleryClick(event) {
+  event.preventDefault(); 
+
+  const imgEl = event.target;
+  if (!imgEl.classList.contains("gallery-image")) return;
+
+  const largeImageUrl = imgEl.dataset.source;
+
+const instance = basicLightbox.create(`<img src="${largeImageUrl}" width="800" height="600">`);
+
+  instance.show();
+
+}
