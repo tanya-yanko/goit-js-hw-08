@@ -83,13 +83,6 @@ const images = [
 
   galleryContainer.innerHTML = galleryMarkup;
 
-  galleryContainer.addEventListener('click', (event) => {
-    event.preventDefault();
-    if (event.target.nodeName !== 'IMG') return;
-  
-  const largeImageURL = event.target.dataset.source;
-  });
-
   galleryContainer.addEventListener("click", onGalleryClick);
 
 function onGalleryClick(event) {
